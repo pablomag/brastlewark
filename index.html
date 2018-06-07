@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="appBrastlewark" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Brastlewark</title>
+	<base href="/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="styles/app.css">
+
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-route/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top-decoration"></div>
+
+		<div class="content">
+			<a href="/#/" class="link unstyled">
+				<header>
+					<h1>B</h1><h3>RASTLEWAR</h3><h1>K</h1>
+				</header>
+			</a>
+
+			<div ng-view class="main"></div>
+		</div>
+
+		<div class="footer">
+			<div class="left">
+				BRASTLEWARK<br>
+				Who are we?
+			</div>
+			<div class="right">
+				@pablomag<br>
+				Frontend development assessment
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

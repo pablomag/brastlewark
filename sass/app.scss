@@ -1,0 +1,36 @@
+/* Main CSS file */
+
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "layout";
+@import "search";
+@import "buttons";
+@import "cards";
+
+hmtl, body
+{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	font-family: $asap-sans;
+	font-weight: 600;
+	color: black;
+	background-color: $app-bg-color;
+	background:
+		radial-gradient(circle farthest-side at 0% 50%,$pattern-bg-light 23.5%,$pattern-bg-dark 0)21px 30px,
+		radial-gradient(circle farthest-side at 0% 50%,$pattern-bg-medium 24%,$pattern-bg-dark 0)19px 30px,
+		linear-gradient($pattern-bg-light 14%,$pattern-bg-dark 0, $pattern-bg-dark 85%,$pattern-bg-light 0)0 0,
+		linear-gradient(150deg,$pattern-bg-light 24%,$pattern-bg-medium 0,$pattern-bg-medium 26%,$pattern-bg-dark 0,$pattern-bg-dark 74%,$pattern-bg-medium 0,$pattern-bg-medium 76%,$pattern-bg-light 0)0 0,
+		linear-gradient(30deg,$pattern-bg-light 24%,$pattern-bg-medium 0,$pattern-bg-medium 26%,$pattern-bg-dark 0,$pattern-bg-dark 74%,$pattern-bg-medium 0,$pattern-bg-medium 76%,$pattern-bg-light 0)0 0,
+		linear-gradient(90deg,$pattern-bg-medium 2%,$pattern-bg-light 0,$pattern-bg-light 98%,$pattern-bg-medium 0%)0 0 $pattern-bg-light;
+	background-size:40px 60px;
+}
+
+.link
+{
+	&.unstyled
+	{
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,133 @@
+.card
+{
+	position: relative;
+	height: 29rem;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+
+	font-family: $bree-serif;
+	font-weight: 600;
+	color: $card-text-color;
+	background-color: $card-bg-color;
+
+	border-radius: .5rem;
+	border-left: .3rem solid $card-margin-l0-color;
+	border-bottom: .3rem solid $card-margin-l0-color;
+	border-right: .3rem solid $card-margin-r0-color;
+	border-top: .3rem solid $card-margin-r0-color;
+}
+
+.card-middle
+{
+	background-color: $card-margin-l0-color;
+	border-radius: .75rem;
+	border-left: 1rem solid $card-margin-l1-color;
+	border-bottom: 1rem solid $card-margin-l1-color;
+	border-right: 1rem solid $card-margin-r1-color;
+	border-top: 1rem solid $card-margin-r1-color;
+}
+
+.card-outer
+{
+	width: 20rem;
+	height: 32rem;
+
+	background-color: $card-margin-l0-color;
+	border-radius: 1rem;
+	border-left: .6rem solid $card-margin-l2-color;
+	border-bottom: .6rem solid $card-margin-l2-color;
+	border-right: .6rem solid $card-margin-r2-color;
+	border-top: .6rem solid $card-margin-r2-color;
+	margin-bottom: 2rem;
+
+	@include box-shadow(.3rem 0 .8rem $card-margin-r1-color,
+						.1rem .4rem 1rem $card-margin-r0-color);
+}
+
+.card-name
+{
+	width: 100%;
+	position: absolute;
+    top: 7%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	padding: .3rem 0;
+	border-bottom: .1rem solid white;
+
+	font-family: $bree-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: white;
+
+	-webkit-text-stroke-width: .02rem;
+	-webkit-text-stroke-color: black;
+
+	text-shadow: .1rem .1rem $card-margin-r0-color;
+}
+
+.card-text
+{
+	background-color: $card-bg-color;
+	width: 90%;
+	height: 100%;
+	position: absolute;
+    top: 60%;
+    left: 50%;
+	transform: translate(-50%, 0);
+	padding: 5%;
+	border-top: .3rem solid $card-margin-l0-color;
+
+	font-size: 1rem;
+	text-align: left;
+	font-weight: 600;
+	color: $card-text-color;
+
+	.brown
+	{
+		font-weight: 600;
+		color: $card-text-color;
+	}
+
+	.white
+	{
+		font-weight: 400;
+		color: white;
+	}
+
+	.left { float: left; }
+	.right { float: right; }
+
+	.profession
+	{
+		font-size: .9rem;
+		border: .05rem solid #aaa;
+		border-radius: 1rem;
+		background-color: #222;
+		padding: 0 .5rem;
+		margin: .3rem .1rem 0 0;
+		line-height: 1.5rem;
+	}
+}
+
+.card-image-responsive
+{
+	width: 100%;
+	height: 20rem;
+	object-fit: cover;
+	opacity: 100%;
+	transition: all ease-in-out 600ms;
+
+	&::before
+	{
+		content: '';
+		background: $card-margin-l0-color;
+		opacity: .5;
+	}
+
+	&:hover
+	{
+		margin-top: -10%;
+	}
+}

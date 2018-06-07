@@ -1,0 +1,55 @@
+<div class="left-column gnome-info">
+	<li ng-if="!inhabitant">Loading...</li>
+
+	<ng-container ng-if="inhabitant">
+		<div class="card-outer">
+			<div class="card-middle">
+				<div class="card-inner">
+					<div class="card">
+						<img class="card-image-responsive"
+							ng-src="{{ inhabitant.thumbnail }}">
+	
+						<div class="card-name">{{ inhabitant.name }}</div>
+						<div class="card-text">
+							<div class="brown left">Age: <span class="white">{{ inhabitant.age }}</span></div>
+							<div class="brown right">Hair: <span class="white">{{ inhabitant.hair_color }}</span></div><br>
+							<div class="brown left">Weight: <span class="white">{{ inhabitant.weight | number : 2 }}</span></div>
+							<div class="brown right">Height: <span class="white">{{ inhabitant.height | number : 2 }}</span></div><br>
+							<div class="brown left">Professions:</div><br>
+							<div class="white left profession" ng-repeat="profession in inhabitant.professions">{{ profession }}</div>
+							<div class="white left profession" ng-if="inhabitant.professions.length === 0">No profession</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ng-container>
+</div>
+
+<div class="right-column friends">
+	<div class="title">FRIENDS</div>
+
+	<ng-container ng-if="inhabitant" ng-repeat="friend in inhabitant.friends">
+		<div class="buttons">
+			<div class="button-outer">
+				<div class="button-middle">
+					<div class="button-inner">
+						<div class="button">
+							<a href="#/gnome/{{ friend }}">
+								<div ng-if="friend" class="button-name">{{ friend }}</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ng-container>
+
+	<ng-container ng-if="inhabitant && inhabitant.friends.length === 0">
+		<div class="button">
+			<div class="button-name">This gnome has no time for friends</div>
+		</div>
+	</ng-container>
+
+	<div class="go-back" ng-click="goback()">go back</div>
+</div>

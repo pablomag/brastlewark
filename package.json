@@ -1,0 +1,34 @@
+{
+  "name": "brastlewark",
+  "version": "1.0.0",
+  "description": "Frontend development assessment",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablomag/brastlewark.git"
+  },
+  "keywords": [
+    "brastlewark",
+    "angular",
+    "frontend",
+    "assessment"
+  ],
+  "author": "pablomag",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.14",
+    "angular-route": "^1.4.14"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.8.3",
+    "postcss-loader": "^2.1.4",
+    "sass-loader": "^6.0.7",
+    "typescript": "~2.4.2",
+    "webpack": "^3.11.0"
+  }
+}
